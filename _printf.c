@@ -3,12 +3,18 @@
 void print_buffer(char buffer[], int *buff_ind);
 
 /**
+<<<<<<< HEAD
+ * _printf - Prints formatted output to stdout
+ * @format: A format string containing conversion specifiers
+ * Return: The number of characters printed (excluding the null byte)
+=======
  * _printf - Printf function
  * @format: format.
  * Return: Printed chars.
  * print_buffer - Prints contents of buffer if it exist.
  * @buffer: Array of chars
  * @buff_ind: Index at which to add next char.
+>>>>>>> 747c5eaf4bbab068f3d4beb0c0ff71081b9daae9
  */
 int _printf(const char *format, ...)
 {
@@ -29,7 +35,10 @@ int _printf(const char *format, ...)
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
+<<<<<<< HEAD
+=======
 			/* write(1, &format[i], 1);*/
+>>>>>>> 747c5eaf4bbab068f3d4beb0c0ff71081b9daae9
 			printed_chars++;
 		}
 		else
@@ -55,6 +64,17 @@ int _printf(const char *format, ...)
 	return (printed_chars);
 }
 
+<<<<<<< HEAD
+/**
+ * print_buffer - Prints the contents of the buffer
+ * @buffer: An array of characters
+ * @buff_ind: A pointer to the current index in the buffer
+ *
+ * This function prints the contents of the buffer to stdout if the buffer is
+ * not empty, and resets the buffer index to 0.
+ */
+=======
+>>>>>>> 747c5eaf4bbab068f3d4beb0c0ff71081b9daae9
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
